@@ -18,7 +18,10 @@
 4. `Reset to defaults` shows everything again.
 5. Auto-hide on: toolbar slides away, returns at the screen edge, stays while
    a sidebar panel is open.
-6. Reload the page: hidden icons and auto-hide persist.
+6. Reload the page: hidden icons, custom order and auto-hide persist.
+7. Drag a menu row by its dotted grip: siblings slide aside, drop works in
+   both groups, toolbar updates live, plain click on the grip toggles nothing.
+8. Menu rows use toggle switches; `Reset to defaults` restores order too.
 
 ## Privacy
 
