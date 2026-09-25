@@ -141,15 +141,9 @@ function applyStyles() {
       `overflow: hidden !important; pointer-events: none !important; }`
   );
   lines.push(`#${BACKDROP_ID} { position: fixed; inset: 0; z-index: 10000; background: transparent; }`);
-  lines.push(`#${MENU_ID} .sh-grip { flex: none; width: 8px; height: 8px; border-radius: 4px; ` +
-    `background-image: radial-gradient(circle, currentColor 1.1px, transparent 1.5px), ` +
-    `radial-gradient(circle, currentColor 1.1px, transparent 1.5px), ` +
-    `radial-gradient(circle, currentColor 1.1px, transparent 1.5px), ` +
-    `radial-gradient(circle, currentColor 1.1px, transparent 1.5px); ` +
-    `background-repeat: no-repeat; background-size: 3px 3px; ` +
-    `background-position: 0 0, 100% 0, 0 100%, 100% 100%; ` +
-    `opacity: 0.35; cursor: grab; touch-action: none; }`);
-  lines.push(`#${MENU_ID} .sh-row:hover .sh-grip { opacity: 0.65; }`);
+  lines.push(`#${MENU_ID} .sh-grip { flex: none; font-size: 13px; color: #fff; ` +
+    `opacity: 0.8; cursor: grab; touch-action: none; }`);
+  lines.push(`#${MENU_ID} .sh-row:hover .sh-grip { opacity: 1; }`);
   lines.push(`#${MENU_ID} .sh-row.sh-drag-src { opacity: 0.55; }`);
   lines.push(`body.sh-dragging, body.sh-dragging * { cursor: grabbing !important; user-select: none !important; }`);
   lines.push(`#${MENU_ID} { position: fixed; z-index: 10001; min-width: 230px; max-width: 300px; ` +
@@ -526,8 +520,8 @@ function addToggleRow(menu, label, checked, onChange, options) {
   };
   paint();
   if (options && options.draggable) {
-    const grip = document.createElement("span");
-    grip.className = "sh-grip";
+    const grip = document.createElement("i");
+    grip.className = "sh-grip icon-[lucide--grip-vertical]";
     grip.setAttribute("aria-hidden", "true");
     row.prepend(grip);
     // The whole row (except the switch) starts a drag.
