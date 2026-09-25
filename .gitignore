@@ -1,0 +1,14 @@
+# Local workflow notes, not for publishing.
+AGENTS.md
+
+# Python cache.
+__pycache__/
+*.py[cod]
+
+# OS leftovers.
+.DS_Store
+Thumbs.db
+
+# Editor settings.
+.vscode/
+.idea/
