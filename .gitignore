@@ -12,3 +12,5 @@ Thumbs.db
 # Editor settings.
 .vscode/
 .idea/
+
+AGENTS.md
